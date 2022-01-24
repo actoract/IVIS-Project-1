@@ -1,0 +1,24 @@
+{
+  "name": "ivis-project-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actoract/IVIS-Project-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/actoract/IVIS-Project-1/issues"
+  },
+  "homepage": "https://github.com/actoract/IVIS-Project-1#readme",
+  "dependencies": {
+    "express.js": "^1.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

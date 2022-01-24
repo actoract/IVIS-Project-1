@@ -14,7 +14,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Self-Introduction-to-IVIS22-_Responses_-_2_%20(1).csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
@@ -42,7 +42,7 @@ const y_array = Array.from({ length: 44 }, (v, i) =>  i + 1);
     .enter()
     .append("rect")
     .attr("x", x(0) )
-    .attr("y", function(d) { return y(d.Country); })
+    .attr("y", function(d) { return y(d.Information_Visualization_skills); })
     .attr("width", function(d) { return x(d.Value); })
     .attr("height", y.bandwidth() )
     .attr("fill", "#69b3a2")

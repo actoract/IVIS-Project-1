@@ -14,8 +14,10 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Self-Introduction-to-IVIS22-_Responses_-_2_%20(1).csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Self-Introduction-to-IVIS22-_Responses_-_2_%20(3).csv", function(data) {
 
+    var subgroups = data.rows.slice(1)
+    alert(subgroups)
   // Add X axis
   var x = d3.scaleLinear()
     .domain([0, 120])
@@ -43,9 +45,21 @@ const y_array = Array.from({ length: 44 }, (v, i) =>  i + 1);
     .append("rect")
     .attr("x", x(0) )
     .attr("y", function(d) { return y(d.Information_Visualization_skills); })
+    .attr("width", function(d) { return x(d.Information_Visualization_skills); })
+    .attr("height", y.bandwidth() )
+    .attr("fill", "#69b3a2")
+
+
+    svg.selectAll("myRect")
+    .data(data)
+    .enter()
+    .append("rect")
+    .attr("x", x(0) )
+    .attr("y", function(d) { return y(d.Country); })
     .attr("width", function(d) { return x(d.Value); })
     .attr("height", y.bandwidth() )
     .attr("fill", "#69b3a2")
+
 
 
     // .attr("x", function(d) { return x(d.Country); })

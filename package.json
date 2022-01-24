@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/actoract/IVIS-Project-1#readme",
   "dependencies": {
     "express.js": "^1.0.0",
+    "node-fetch": "^3.2.0",
+    "node-static": "^0.7.11",
     "nodemon": "^2.0.15"
   }
 }

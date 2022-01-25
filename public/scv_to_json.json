@@ -1,0 +1,104 @@
+[
+    {
+      "className":"Value_1",
+      "axes": [
+        {"axis": "Information_Visualization_skills", "value": 2},
+        {"axis": "Statistical_skills", "value": 3},
+        {"axis": "Mathematics_skills", "value": 2},
+        {"axis": "Artistic_skills", "value": 5},  
+        {"axis": "Computer_usage_skills", "value": 7},  
+        {"axis": "Programming_skills", "value": 5},
+        {"axis": "Computer_graphics_programming_skills", "value": 2},
+        {"axis": "Hinteraction_programming_skills", "value": 5},
+        {"axis": "User_experience_evaluation_skills", "value": 8},
+        {"axis": "Communication_skills", "value": 9},
+        {"axis": "Collaboration_skills", "value": 6},
+        {"axis": "Code_repository_skills", "value": 3}
+      ]
+    },
+    {
+      "className":"Value_2",
+      "axes": [
+        {"axis": "Information_Visualization_skills", "value": 4},
+        {"axis": "Statistical_skills", "value": 4},
+        {"axis": "Mathematics_skills", "value": 5},
+        {"axis": "Artistic_skills", "value": 4},  
+        {"axis": "Computer_usage_skills", "value": 6},  
+        {"axis": "Programming_skills", "value": 7},
+        {"axis": "Computer_graphics_programming_skills", "value": 3},
+        {"axis": "Hinteraction_programming_skills", "value": 2},
+        {"axis": "User_experience_evaluation_skills", "value": 8},
+        {"axis": "Communication_skills", "value": 10},
+        {"axis": "Collaboration_skills", "value": 10},
+        {"axis": "Code_repository_skills", "value": 7}
+      ]
+    },
+    {
+      "className":"Value_3",
+      "axes": [
+        {"axis": "Information_Visualization_skills", "value": 4},
+        {"axis": "Statistical_skills", "value": 4},
+        {"axis": "Mathematics_skills", "value": 6},
+        {"axis": "Artistic_skills", "value": 2},  
+        {"axis": "Computer_usage_skills", "value": 7},  
+        {"axis": "Programming_skills", "value": 5},
+        {"axis": "Computer_graphics_programming_skills", "value": 5},
+        {"axis": "Hinteraction_programming_skills", "value": 5},
+        {"axis": "User_experience_evaluation_skills", "value": 7},
+        {"axis": "Communication_skills", "value": 10},
+        {"axis": "Collaboration_skills", "value": 9},
+        {"axis": "Code_repository_skills", "value": 5}
+      ]
+    },
+    {
+      "className":"Value_4",
+      "axes": [
+        {"axis": "Information_Visualization_skills", "value": 4},
+        {"axis": "Statistical_skills", "value": 5},
+        {"axis": "Mathematics_skills", "value": 5},
+        {"axis": "Artistic_skills", "value": 6},  
+        {"axis": "Computer_usage_skills", "value": 7},  
+        {"axis": "Programming_skills", "value": 7},
+        {"axis": "Computer_graphics_programming_skills", "value": 3},
+        {"axis": "Hinteraction_programming_skills", "value": 7},
+        {"axis": "User_experience_evaluation_skills", "value": 2},
+        {"axis": "Communication_skills", "value": 8},
+        {"axis": "Collaboration_skills", "value": 8},
+        {"axis": "Code_repository_skills", "value": 9}
+      ]
+    },
+    {
+      "className":"Value_5",
+      "axes": [
+        {"axis": "Information_Visualization_skills", "value": 5},
+        {"axis": "Statistical_skills", "value": 6},
+        {"axis": "Mathematics_skills", "value": 8},
+        {"axis": "Artistic_skills", "value": 8},  
+        {"axis": "Computer_usage_skills", "value": 4},  
+        {"axis": "Programming_skills", "value": 7},
+        {"axis": "Computer_graphics_programming_skills", "value": 6},
+        {"axis": "Hinteraction_programming_skills", "value": 6},
+        {"axis": "User_experience_evaluation_skills", "value": 7},
+        {"axis": "Communication_skills", "value": 6},
+        {"axis": "Collaboration_skills", "value": 8},
+        {"axis": "Code_repository_skills", "value": 6}
+      ]
+    },
+    {
+      "className":"Value_6",
+      "axes": [
+        {"axis": "Information_Visualization_skills", "value": 3},
+        {"axis": "Statistical_skills", "value": 3},
+        {"axis": "Mathematics_skills", "value": 3},
+        {"axis": "Artistic_skills", "value": 2},  
+        {"axis": "Computer_usage_skills", "value": 6},  
+        {"axis": "Programming_skills", "value": 2},
+        {"axis": "Computer_graphics_programming_skills", "value": 2},
+        {"axis": "Hinteraction_programming_skills", "value": 3},
+        {"axis": "User_experience_evaluation_skills", "value": 3},
+        {"axis": "Communication_skills", "value": 9},
+        {"axis": "Collaboration_skills", "value": 8},
+        {"axis": "Code_repository_skills", "value": 3}
+      ]
+    }
+  ]

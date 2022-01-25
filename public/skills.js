@@ -1,4 +1,4 @@
-var participants = [
+var participants = [ //Array of studens for Radar chart
   {label: "Student_1", 
   backgroundColor: "rgba(0,0,200,0.2)",
   data: [2,3,2,5,7,5,2,5,8,9,6,3],
@@ -265,9 +265,9 @@ var participants = [
   }
 ];
 var marksCanvas = document.getElementById("marksChart");
-
+var student_info = []
 var marksData = {
-  labels: ["Information Visualization", "Statistics", "Math", "Art", "Computer usage", "Programming", "Computer graphics programming", "HCI programming", "User experience evaluation", "Communication", "Collaboration", "Code repository"],
+  labels: ["Information Visualization", "Statistics", "Math", "Art", "Computer usage", "Programming", "Computer graphics programming", "HCI programming", "UX evaluation", "Communication", "Collaboration", "Code repository"],
   datasets: []
 };
 const setBg = () => {
@@ -283,6 +283,7 @@ var infoAboutSkill = d3.select("body")
     .style("visibility", "hidden")
     .style("background", "white")
     .style("padding", "10px")
+    .style("border-radius", "20px")
     .text("User");
 
 var chartDetails = {
@@ -310,10 +311,14 @@ var radarChart = new Chart(marksCanvas, {
 
 function clearRadarChart(){
   marksData.datasets.splice(0,marksData.datasets.length)
+  for (i = 1; i <= student_info.length; i++){
+    document.getElementById("table").deleteRow(1);
+  }
+  student_info.splice(0,student_info.length)
   radarChart.update();
 }
 // set the dimensions and margins of the graph
-var margin = {top: 30, right: 30, bottom: 20, left: 50},
+var margin = {top: 30, right: 30, bottom: 20, left: 80},
     width = 700 - margin.left - margin.right,
     height = 650 - margin.top - margin.bottom;
 
@@ -352,15 +357,6 @@ d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Se
     .padding([0.1])
   svg.append("g")
     .call(d3.axisLeft(y));
-    /*.on('click', function (d) {
-      //alert(d3.axisLeft(y))
-      alert(d.group)
-      marksData.datasets.push({
-        label: "gggg", 
-        backgroundColor: "rgba(0,0,200,0.2)",
-        data: [5, 9, 6, 7, 7, 7, 9, 9, 9, 10,10]})
-        radarChart.update();
-    });*/
 
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
@@ -390,109 +386,37 @@ d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Se
         .on("mouseover", function(d){infoAboutSkill.text("User: " + d.data.group + " / " + "Skill level: " + (d[1] - d[0])); return infoAboutSkill.style("visibility", "visible");})
         .on("mousemove", function(){return infoAboutSkill.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
         .on("mouseout", function(){return infoAboutSkill.style("visibility", "hidden");})
-        /*.on('mouseover', function (d, i) {
-            d3.select(this).transition()
-                 .duration('50')
-                 .attr('opacity', '.85');
-            div.transition()
-                 .duration(50)
-                 .style("opacity", 1);
-            let num = (Math.round((d.value / d.data.all) * 100)).toString() + '%';
-            div.html("d.data.group")
-                 .style("left", (d3.event.pageX + 10) + "px")
-                 .style("top", (d3.event.pageY - 15) + "px");
-       })
-       .on('mouseout', function (d, i) {
-            d3.select(this).transition()
-                 .duration('50')
-                 .attr('opacity', '1');
-            div.transition()
-                 .duration('50')
-                 .style("opacity", 0);
-       })*/
        .on('click', function (d) {
-        //alert(d.data.group)
-        //alert(participants[0].label)
         let single_value = participants.find(participant => participant.label == d.data.group)
-        //alert(single_value.label)
+        student_info.push({
+          label: single_value.label,
+          hobby: single_value.hobby,
+          program: single_value.program
+        }) 
+        let table = document.getElementById('table');
+          table.insertRow();
+          let newCell1 = table.rows[student_info.length].insertCell();
+          let newCell2 = table.rows[student_info.length].insertCell();
+          let newCell3 = table.rows[student_info.length].insertCell();
+          //add text to the created cell element
+          newCell1.textContent = student_info[student_info.length - 1].label;
+          newCell2.textContent = student_info[student_info.length - 1].hobby;
+          newCell3.textContent = student_info[student_info.length - 1].program;
+        
         marksData.datasets.push({
           label: single_value.label, 
           backgroundColor: "rgba(" + Math.floor(Math.random() * (255 - 0 + 1) + 0) + "," + Math.floor(Math.random() * (255 - 0 + 1) + 0) + ","+ Math.floor(Math.random() * (255 - 0 + 1) + 0)+ ",0.5)",
           data: single_value.data})
           radarChart.update();
-      })
-        /*.on('click', function (d, i) {
-            marksData.datasets.push({
-              label: "gggg", 
-              backgroundColor: "rgba(0,0,200,0.2)",
-              data: [5, 9, 6, 7, 7, 7, 9, 9, 9, 10,10]})
-              radarChart.update();
-        })*/;
+      });
 })
-
-function mouseDown() {
-    console.log("hkjfhsk");
+if (student_info.length > 0){
+  let table = document.createElement('table');
+  for(var i = 1; i < student_info.length; i++)
+  {
+    console.log(table)
+    table.rows[i].cells[0].innerHTML = student_info[i].label;
+    table.rows[i].cells[1].innerHTML = student_info[i].hobby;
+    table.rows[i].cells[2].innerHTML = student_info[i].degree;
+  }
 }
-
-function mouseUp(name) {
-    console.log(name);
-}
-
-function mouseClick(i) {
-  marksData.datasets.push({ 
-    label: "id", 
-    backgroundColor: "rgba(0,0,200,0.2)",
-    data: [5, 9, 6, 7, 7, 7, 9, 9, 9]});
-}
-
-/*anychart.onDocumentReady(function () {
-  // our data from bulbapedia
-    var data1 = [
-      {x: "HP", value: 39},
-      {x: "Attack", value: 52},
-      {x: "Defense", value: 43},
-      {x: "Special Attack", value: 60},
-      {x: "Special Defense", value: 50},
-      {x: "Speed", value: 65},
-    ];
-
-    var data2 = [
-      {x: "HP", value: 45},
-      {x: "Attack", value: 49},
-      {x: "Defense", value: 49},
-      {x: "Special Attack", value: 65},
-      {x: "Special Defense", value: 65},
-      {x: "Speed", value: 45},
-    ];  
-
-    var data3 = [
-      {x: "HP", value: 44},
-      {x: "Attack", value: 48},
-      {x: "Defense", value: 65},
-      {x: "Special Attack", value: 50},
-      {x: "Special Defense", value: 64},
-      {x: "Speed", value: 43},
-    ];  
-
-    // create radar chart
-    var chart = anychart.radar();
-    // set chart yScale settings
-    chart.yScale()
-      .minimum(35)
-      .maximum(65)
-      .ticks({'interval':5});
-
-    // create first series
-    chart.line(data1)
-    // create second series
-    chart.line(data2)
-    // create third series
-    chart.line(data3)
-    // set container id for the chart
-    chart.container('container');
-    // initiate chart drawing
-    chart.draw();
-
-  });
-*/
-

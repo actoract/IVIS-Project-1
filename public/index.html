@@ -11,12 +11,67 @@
     <script src="http://d3js.org/d3.v3.min.js"></script>    
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    
+
+    <style type="text/css">
+        .split {
+          height: 100%;
+          width: 50%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        /* Control the left side */
+        .left {
+          left: 0;
+          background-color: white;
+        }
+
+        /* Control the right side */
+        .right {
+          right: 0;
+          background-color: white;
+        }
+
+        /* If you want the content centered horizontally and vertically */
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+        /* Style the image inside the centered container, if needed */
+        .centered img {
+          width: 150px;
+        }
+      </style>
 
 </head>
-<body>
+  <body>
+    <div class="split left">
+      <div class="centered">
+        <div id="my_dataviz"></div>
+      </div>
+    </div>
     
-    <div id="my_dataviz"></div>
+    <div class="split right">
+      <div class="centered">
+        <div id="container"></div>
+        <canvas id="marksChart" width="700" height="700"></canvas>
+      </div>
+    </div>
+    <div id="container"></div>
     <script language="JavaScript" type="text/javascript" src="/skills.js"></script>   
-    <div class="chart-container"></div>    
+    <script language="JavaScript" type="text/javascript" src="/radar.js"></script>   
+   <div class="chart-container"></div>  
 </body>
 </html>

@@ -1,3 +1,32 @@
+var marksCanvas = document.getElementById("marksChart");
+
+var marksData = {
+  labels: ["Information Visualization", "Statistics", "Math", "Art", "Computer usage", "Programming", "Computer_graphics_programming", "HI interaction programming", "Communication", "Collaboration", "Code repository"],
+  datasets: []
+};
+
+var chartDetails = {
+  scale: {
+    ticks: {
+      beginAtZero: true,
+      min: 0,
+      max: 10,
+      stepSize: 1
+    },
+    pointLabels: {
+      fontSize: 18
+    }
+  },
+  legend: {
+    position: 'left'
+  }
+};
+
+var radarChart = new Chart(marksCanvas, {
+  type: 'radar',
+  data: marksData,
+  options: chartDetails
+});
 // set the dimensions and margins of the graph
 var margin = {top: 30, right: 30, bottom: 20, left: 50},
     width = 700 - margin.left - margin.right,
@@ -35,9 +64,17 @@ d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Se
   var y = d3.scaleBand()
   .domain(data.map(function(d) { return d.group; }))
     .range([ 0, height ])
-    .padding([0.1]);
+    .padding([0.1])
   svg.append("g")
-    .call(d3.axisLeft(y));
+    .call(d3.axisLeft(y))
+    .on('click', function (d) {
+      //alert(d3.axisLeft(y))
+      marksData.datasets.push({
+        label: "gggg", 
+        backgroundColor: "rgba(0,0,200,0.2)",
+        data: [5, 9, 6, 7, 7, 7, 9, 9, 9, 10,10]})
+        radarChart.update();
+    });
 
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
@@ -84,10 +121,21 @@ d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Se
                  .duration('50')
                  .style("opacity", 0);
        })
-       .on('click', function (d, i) {
-           //alert(i)
-           mouseClick(i)
-        });
+       .on('click', function (d) {
+        alert("fbndfk")
+        marksData.datasets.push({
+          label: "gggg", 
+          backgroundColor: "rgba(0,0,200,0.2)",
+          data: [5, 9, 6, 7, 7, 7, 9, 9, 9, 10,10]})
+          radarChart.update();
+      })
+        /*.on('click', function (d, i) {
+            marksData.datasets.push({
+              label: "gggg", 
+              backgroundColor: "rgba(0,0,200,0.2)",
+              data: [5, 9, 6, 7, 7, 7, 9, 9, 9, 10,10]})
+              radarChart.update();
+        })*/;
 })
 
 function mouseDown() {
@@ -99,5 +147,60 @@ function mouseUp(name) {
 }
 
 function mouseClick(i) {
-    console.log(i);
+  marksData.datasets.push({ 
+    label: "id", 
+    backgroundColor: "rgba(0,0,200,0.2)",
+    data: [5, 9, 6, 7, 7, 7, 9, 9, 9]});
 }
+
+/*anychart.onDocumentReady(function () {
+  // our data from bulbapedia
+    var data1 = [
+      {x: "HP", value: 39},
+      {x: "Attack", value: 52},
+      {x: "Defense", value: 43},
+      {x: "Special Attack", value: 60},
+      {x: "Special Defense", value: 50},
+      {x: "Speed", value: 65},
+    ];
+
+    var data2 = [
+      {x: "HP", value: 45},
+      {x: "Attack", value: 49},
+      {x: "Defense", value: 49},
+      {x: "Special Attack", value: 65},
+      {x: "Special Defense", value: 65},
+      {x: "Speed", value: 45},
+    ];  
+
+    var data3 = [
+      {x: "HP", value: 44},
+      {x: "Attack", value: 48},
+      {x: "Defense", value: 65},
+      {x: "Special Attack", value: 50},
+      {x: "Special Defense", value: 64},
+      {x: "Speed", value: 43},
+    ];  
+
+    // create radar chart
+    var chart = anychart.radar();
+    // set chart yScale settings
+    chart.yScale()
+      .minimum(35)
+      .maximum(65)
+      .ticks({'interval':5});
+
+    // create first series
+    chart.line(data1)
+    // create second series
+    chart.line(data2)
+    // create third series
+    chart.line(data3)
+    // set container id for the chart
+    chart.container('container');
+    // initiate chart drawing
+    chart.draw();
+
+  });
+*/
+

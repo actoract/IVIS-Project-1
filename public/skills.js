@@ -1,185 +1,273 @@
 var participants = [
-  {label: "Value_1", 
+  {label: "Student_1", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,3,2,5,7,5,2,5,8,9,6,3]
+  data: [2,3,2,5,7,5,2,5,8,9,6,3],
+  hobby: "Video Games, Nature, Basketball, Design, UX",
+  program: "Media Technology"
   },
-  {label: "Value_2", 
+  {label: "Student_2", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [4,4,5,4,6,7,3,2,8,10,10,7]
+  data: [4,4,5,4,6,7,3,2,8,10,10,7],
+  hobby: "I like to play games, watch movies, TV series and learning in general.",
+  program: "Computer Science, Human-Computer Interaction, Media Technology"
   },
-  {label: "Value_3", 
+  {label: "Student_3", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [4,4,6,2,7,5,5,5,7,10,9,5]
+  data: [4,4,6,2,7,5,5,5,7,10,9,5],
+  hobby: "I love to workout, and I have played handball almost all my life, until work made it hard to keep on going. I work as a bartender besides studying, so late nights and weekends make it hard to be able to play handball. Besides that I like going to the gym, playing video games and hanging out with friends and family.",
+  program: "Media Technology"
   },
-  {label: "Value_4", 
+  {label: "Student_4", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [4,5,5,6,7,7,3,7,2,8,8,9]
+  data: [4,5,5,6,7,7,3,7,2,8,8,9],
+  hobby: "Playing guitar, photography, playing games and game development",
+  program: "Computer Science, Media Technology"
   },
-  {label: "Value_5", 
+  {label: "Student_5", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [6,8,8,4,7,7,6,6,7,6,8,6]
+  data: [6,8,8,4,7,7,6,6,7,6,8,6],
+  hobby: "I like sports and music.",
+  program: "Computer Science, Human-Computer Interaction, Media Technology"
   },
-  {label: "Value_6", 
+  {label: "Student_6", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,3,3,2,6,2,2,3,3,9,8,3]
+  data: [3,3,3,2,6,2,2,3,3,9,8,3],
+  hobby: "Football, Working out, TV-Series and Movies, The stock market",
+  program: "Human-Computer Interaction, Media Technology"
   },
-  {label: "Value_7", 
+  {label: "Student_7", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,6,7,6,9,5,3,4,4,9,10,6]
+  data: [3,6,7,6,9,5,3,4,4,9,10,6],
+  hobby: "3D printing and designing, any Adobe program (creative), basketball, tennis and golf",
+  program: "Human-Computer Interaction"
   },
-  {label: "Value_8", 
+  {label: "Student_8", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [1,3,4,3,7,5,6,3,2,8,8,5]
+  data: [1,3,4,3,7,5,6,3,2,8,8,5],
+  hobby: "Music, gaming",
+  program: "Computer Science"
   },
-  {label: "Value_9", 
+  {label: "Student_9", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [5,6,5,5,8,6,7,5,4,8,6,7]
+  data: [5,6,5,5,8,6,7,5,4,8,6,7],
+  hobby: "Videogames, music, tech, working out...",
+  program: "Computer Science"
   },
-  {label: "Value_10", 
+  {label: "Student_10", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,6,1,7,5,2,2,2,4,8,7,3]
+  data: [2,6,1,7,5,2,2,2,4,8,7,3],
+  hobby: "Painting, cats, plants, perhaps graphs",
+  program: "Computer Science, Media Technology"
   },
-  {label: "Value_11", 
+  {label: "Student_11", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,4,5,7,7,3,2,3,7,4,5,5]
+  data: [2,4,5,7,7,3,2,3,7,4,5,5],
+  hobby: "Media Technology",
+  program: ""
   },
-  {label: "Value_12", 
+  {label: "Student_12", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,3,3,6,9,5,2,3,3,8,8,4]
+  data: [3,3,3,6,9,5,2,3,3,8,8,4],
+  hobby: "I like playing guitar and video games",
+  program: "Computer Science"
   },
-  {label: "Value_13", 
+  {label: "Student_13", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,2,5,7,5,4,2,2,8,9,8,6]
+  data: [3,2,5,7,5,4,2,2,8,9,8,6],
+  hobby: "I enjoy playing the piano, going to bars with friends and a having a good sleep-in on the weekends. Also, I play a lot of Minecraft and scroll Twitter as obsessed.",
+  program: "Media Technology"
   },
-  {label: "Value_14", 
+  {label: "Student_14", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,4,7,2,7,6,4,3,2,5,5,6]
+  data: [3,4,7,2,7,6,4,3,2,5,5,6],
+  hobby: "Main interest is VR and things that go along with it such as full body tracking, virtual avatars, display technology, etc. Hobbies would mainly be gaming with friends, working out, reading and playing music.",
+  program: "Computer Science"
   },
-  {label: "Value_15", 
+  {label: "Student_15", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [5,8,8,3,8,5,5,6,5,7,7,9]
+  data: [5,8,8,3,8,5,5,6,5,7,7,9],
+  hobby: "I love video games and sports. For example, swimming and going to the gym.",
+  program: "Computer Science"
   },
-  {label: "Value_16", 
+  {label: "Student_16", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [8,9,7,5,9,7,6,5,6,7,6,7]
+  data: [8,9,7,5,9,7,6,5,6,7,6,7],
+  hobby: "Wargaming",
+  program: "Business Administration, Finance, Law, Economics and Business"
   },
-  {label: "Value_17", 
+  {label: "Student_17", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,4,5,8,4,7,5,3,4,8,7,7]
+  data: [3,4,5,8,4,7,5,3,4,8,7,7],
+  hobby: "I can say for sure that I am interested in painting and in studying art. I'm also interested in web development, language learning, yoga, coffee brewing. I like to study technical structured disciplines, however, I would qualify myself more as a creative person",
+  program: "Media Technology"
   },
-  {label: "Value_18", 
+  {label: "Student_18", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,3,6,8,8,5,7,6,5,9,9,4]
+  data: [3,3,6,8,8,5,7,6,5,9,9,4],
+  hobby: "I have too many interests. Running, reading, knitting, yoga, video games, drawing",
+  program: "Media Technology"
   },
-  {label: "Value_19", 
+  {label: "Student_19", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [5,7,6,4,8,9,5,6,3,5,7,8]
+  data: [5,7,6,4,8,9,5,6,3,5,7,8],
+  hobby: "I spend most of my spare time playing music, being outdoors or cooking.",
+  program: "Computer Science"
   },
-  {label: "Value_20", 
+  {label: "Student_20", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [5,7,6,1,8,7,7,7,7,5,7,8]
+  data: [5,7,6,1,8,7,7,7,7,5,7,8],
+  hobby: "Music, friends and trying new things",
+  program: "Media Technology"
   },
-  {label: "Value_21", 
+  {label: "Student_21", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [6,6,7,8,8,6,6,5,5,10,9,8]
+  data: [6,6,7,8,8,6,6,5,5,10,9,8],
+  hobby: "Programming, cats, photography, politics and sports",
+  program: "Computer Science"
   },
-  {label: "Value_22", 
+  {label: "Student_22", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [7,4,5,2,9,8,3,4,3,7,6,9]
+  data: [7,4,5,2,9,8,3,4,3,7,6,9],
+  hobby: "board games, dancing, ultimate frisbee, artificial intelligence, meeting friends, video games, ...",
+  program: "Computer Science"
   },
-  {label: "Value_23", 
+  {label: "Student_23", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [1,1,6,3,3,6,2,1,1,4,4,4]
+  data: [1,1,6,3,3,6,2,1,1,4,4,4],
+  hobby: "I play video games and pen-and-paper role playing games. I also help out in church with the projector, for lyrics. I am particularly interested in video games, and hope to make my own one day. (A very unique aspiration, I know)",
+  program: "Computer Science"
   },
-  {label: "Value_24", 
+  {label: "Student_24", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [1,4,5,4,9,3,1,2,2,5,7,4]
+  data: [1,4,5,4,9,3,1,2,2,5,7,4],
+  hobby: "I like technology and computer interaction. My hobbies are computer games, skiing and sailing. ",
+  program: "Computer Science"
   },
-  {label: "Value_25", 
+  {label: "Student_25", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,6,5,1,7,6,3,5,5,8,7,8]
+  data: [3,6,5,1,7,6,3,5,5,8,7,8],
+  hobby: "kayaking, windsurfing, hiking",
+  program: "Media Technology"
   },
-  {label: "Value_26", 
+  {label: "Student_26", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,3,7,3,8,8,7,3,3,7,8,8]
+  data: [2,3,7,3,8,8,7,3,3,7,8,8],
+  hobby: "Academically I am interested in computer graphics, most especially for animation and video games. My hobbies include playing piano, board games, and ultimate frisbee.",
+  program: "Computer Science, Computer Engineering"
   },
-  {label: "Value_27", 
+  {label: "Student_27", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,4,5,4,7,5,5,3,3,4,5,4]
+  data: [2,4,5,4,7,5,5,3,3,4,5,4],
+  hobby: "Mostly I just watch Youtube and play games.",
+  program: "Computer Science, Media Technology"
   },
-  {label: "Value_28", 
+  {label: "Student_28", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [1,3,7,10,6,1,4,2,3,7,8,5]
+  data: [1,3,7,10,6,1,4,2,3,7,8,5],
+  hobby: "My hobbies are music, art and photography",
+  program: "Computer Science"
   },
-  {label: "Value_29", 
+  {label: "Student_29", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [1,3,5,2,7,4,1,1,3,10,8,8]
+  data: [1,3,5,2,7,4,1,1,3,10,8,8],
+  hobby: "Reading",
+  program: "Computer Science"
   },
-  {label: "Value_30", 
+  {label: "Student_30", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [1,4,4,10,10,2,1,4,6,8,10,2]
+  data: [1,4,4,10,10,2,1,4,6,8,10,2],
+  hobby: "I am interested in photography and illustrations.",
+  program: "Media Technology"
   },
-  {label: "Value_31", 
+  {label: "Student_31", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [5,3,8,3,9,8,5,4,2,9,5,8]
+  data: [5,3,8,3,9,8,5,4,2,9,5,8],
+  hobby: "CS:GO, Friends, YouTube, Programming (often games).",
+  program: "Computer Science"
   },
-  {label: "Value_32", 
+  {label: "Student_32", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,3,8,8,8,7,1,5,5,8,7,8]
+  data: [2,3,8,8,8,7,1,5,5,8,7,8],
+  hobby: "art, gardening, skiing, reading, swimming and just generally trying to figure stuff out",
+  program: "Media Technology"
   },
-  {label: "Value_33", 
+  {label: "Student_33", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,3,7,2,8,6,3,4,3,5,6,6]
+  data: [2,3,7,2,8,6,3,4,3,5,6,6],
+  hobby: "My main hobbies are playing the guitar, badminton and video games. ",
+  program: "Computer Science"
   },
-  {label: "Value_34", 
+  {label: "Student_34", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,1,5,2,7,4,3,3,3,5,5,5]
+  data: [2,1,5,2,7,4,3,3,3,5,5,5],
+  hobby: "Board games, video games, game development",
+  program: "Media Technology"
   },
-  {label: "Value_35", 
+  {label: "Student_35", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,3,5,5,8,6,7,4,3,6,6,5]
+  data: [3,3,5,5,8,6,7,4,3,6,6,5],
+  hobby: "I like kayaking, running, developing games and traveling. ",
+  program: "Computer Science"
   },
-  {label: "Value_36", 
+  {label: "Student_36", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,6,7,5,7,5,3,5,3,8,8,3]
+  data: [2,6,7,5,7,5,3,5,3,8,8,3],
+  hobby: "I love cooking and baking. Also like to hike and all types of crafting e.g., knitting. ",
+  program: "Media Technology"
   },
-  {label: "Value_37", 
+  {label: "Student_37", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,3,4,8,7,8,8,5,1,5,5,5]
+  data: [3,3,4,8,7,8,8,5,1,5,5,5],
+  hobby: "My hobbies are playing games, programming and gardening.",
+  program: "Computer Science"
   },
-  {label: "Value_38", 
+  {label: "Student_38", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,1,1,5,8,4,1,4,3,5,7,6]
+  data: [3,1,1,5,8,4,1,4,3,5,7,6],
+  hobby: "Photography, Design, Travelling & Hiking",
+  program: "Media Technology"
   },
-  {label: "Value_39", 
+  {label: "Student_39", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,3,4,8,8,5,3,3,3,5,6,6]
+  data: [3,3,4,8,8,5,3,3,3,5,6,6],
+  hobby: "I'm interested in slowing down and appreciating the details. I'm interested in beautiful and evocative visuals and ideas. Here are some hobbies enumerated: Painting, Reading, Cooking, Programming, Climbing, Games.",
+  program: "Computer Science"
   },
-  {label: "Value_40", 
+  {label: "Student_40", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [1,5,5,9,9,6,1,3,9,10,10,6]
+  data: [1,5,5,9,9,6,1,3,9,10,10,6],
+  hobby: "I enjoy reading, playing sports, listening/creating music.",
+  program: "Media Technology"
   },
-  {label: "Value_41", 
+  {label: "Student_41", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [2,4,6,7,5,4,3,4,4,3,3,5]
+  data: [2,4,6,7,5,4,3,4,4,3,3,5],
+  hobby: "",
+  program: "Media Technology"
   },
-  {label: "Value_42", 
+  {label: "Student_42", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [4,4,6,7,5,5,6,6,8,8,9,4]
+  data: [4,4,6,7,5,5,6,6,8,8,9,4],
+  hobby: "VR games and skiing ",
+  program: "Human-Computer Interaction, Media Technology, Graphic Design, Marketing"
   },
-  {label: "Value_43", 
+  {label: "Student_43", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [3,4,5,10,8,2,2,3,8,6,4,2]
+  data: [3,4,5,10,8,2,2,3,8,6,4,2],
+  hobby: "Music. Cartoon",
+  program: "Media Technology"
   },
-  {label: "Value_44", 
+  {label: "Student_44", 
   backgroundColor: "rgba(0,0,200,0.2)",
-  data: [5,3,7,7,8,8,3,5,6,9,9,8]
+  data: [5,3,7,7,8,8,3,5,6,9,9,8],
+  hobby: "I'm interested in software development an qa. I like reading, watching series, doing sport.",
+  program: "Computer Science"
   }
 ];
 var marksCanvas = document.getElementById("marksChart");
 
 var marksData = {
-  labels: ["Information Visualization", "Statistics", "Math", "Art", "Computer usage", "Programming", "Computer_graphics_programming", "HI interaction programming", "User experience evaluation", "Communication", "Collaboration", "Code repository"],
+  labels: ["Information Visualization", "Statistics", "Math", "Art", "Computer usage", "Programming", "Computer graphics programming", "HCI programming", "User experience evaluation", "Communication", "Collaboration", "Code repository"],
   datasets: []
 };
 const setBg = () => {
@@ -227,7 +315,7 @@ function clearRadarChart(){
 // set the dimensions and margins of the graph
 var margin = {top: 30, right: 30, bottom: 20, left: 50},
     width = 700 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    height = 650 - margin.top - margin.bottom;
 
 var div = d3.select("body").append("div")
     .attr("class", "tooltip-donut")

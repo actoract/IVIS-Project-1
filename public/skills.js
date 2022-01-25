@@ -187,6 +187,16 @@ const setBg = () => {
   return randomColor
 }
 
+var infoAboutSkill = d3.select("body")
+    .append("div")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("width", "auto")
+    .style("visibility", "hidden")
+    .style("background", "white")
+    .style("padding", "10px")
+    .text("User");
+
 var chartDetails = {
   scale: {
     ticks: {
@@ -289,7 +299,10 @@ d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Se
         .attr("y", function(d) { return y(d.data.group); })
         .attr("width", function(d) { return x(d[1]) - x(d[0]); })
         .attr("height",y.bandwidth())
-        .on('mouseover', function (d, i) {
+        .on("mouseover", function(d){infoAboutSkill.text("User: " + d.data.group + " / " + "Skill level: " + (d[1] - d[0])); return infoAboutSkill.style("visibility", "visible");})
+        .on("mousemove", function(){return infoAboutSkill.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+        .on("mouseout", function(){return infoAboutSkill.style("visibility", "hidden");})
+        /*.on('mouseover', function (d, i) {
             d3.select(this).transition()
                  .duration('50')
                  .attr('opacity', '.85');
@@ -308,7 +321,7 @@ d3.csv("https://raw.githubusercontent.com/actoract/IVIS-Project-1/main/public/Se
             div.transition()
                  .duration('50')
                  .style("opacity", 0);
-       })
+       })*/
        .on('click', function (d) {
         //alert(d.data.group)
         //alert(participants[0].label)

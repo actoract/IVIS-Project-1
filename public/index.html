@@ -39,19 +39,46 @@
           right: 0;
           background-color: white;
         }
-
-        /* If you want the content centered horizontally and vertically */
-        .centered {
+        .clear{
+          font-family: Arial, Helvetica, sans-serif;
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-align: center;
+          width: auto;
+          padding-left: 10px;
+          padding-top: 10px;
+          padding-right: 10px;
+          height:40px;
+          top: 30px;
+          right: 50px;
+          background: #FFFFFF;
+          box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 0.3);
+          border-radius: 20px;
+          border-color: #FFFFFF;
+          color: #757575;
         }
-
-        /* Style the image inside the centered container, if needed */
-        .centered img {
-          width: 150px;
+        .clear:hover{
+          box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 0.5);
+        }
+        .overview{
+          font-family: Arial, Helvetica, sans-serif;
+          position: relative;
+          top: 80vh;
+          left: 10vw;
+          margin-top: 10px;
+          padding: 30px;
+          background: #FFFFFF;
+          box-shadow: 5px 5px 100px 5px rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+          border-color: #FFFFFF;
+          width:400px;
+          height: auto;
+          color: #757575;
+        }
+        .marksChart1{
+          position: absolute;
+          width:700px; 
+          height:700px;
+          top: 20%;
+          margin-bottom: 10px;
         }
       </style>
 
@@ -66,7 +93,11 @@
     <div class="split right">
       <div class="centered">
         <div id="container"></div>
-        <canvas id="marksChart" width="700" height="700"></canvas>
+        <div class="clear" onclick="clearRadarChart()"> 
+          Clear radar chart
+        </div>
+        <canvas id="marksChart" class="marksChart1"></canvas>
+       
       </div>
     </div>
     <div id="container"></div>

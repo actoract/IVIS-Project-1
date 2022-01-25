@@ -24,10 +24,8 @@ app.get('../skills.json', (req, res) => {
 })
 
 
-app.listen("3000", () => {
-    console.log('listening......');
-})
-
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."))
 
 
 
